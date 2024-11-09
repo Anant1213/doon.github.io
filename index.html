@@ -6152,21 +6152,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // Get the current URL
         const currentURL = window.location.href;
 
-        // Load the Voiceflow chatbot with the current URL passed as a metadata field
+        // Load the Voiceflow chatbot with the current URL passed as metadata
         window.voiceflow.chat.load({
           verify: { projectID: '671e81721a303b9ba850ddd4' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          metadata: { source_url: currentURL }  // Pass the URL here
+          metadata: { source_url: currentURL }  // Pass the current URL here
         });
 
-        // Optional: Log the current URL to the console
+        // Optional: Log the current URL to the console for debugging
         console.log("Current URL:", currentURL);
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      };
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
   })(document, 'script');
-</script>
-		<!-- End chatbot script -->
+</script>		<!-- End chatbot script -->
 
 	
 		
