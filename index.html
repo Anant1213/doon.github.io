@@ -4652,19 +4652,6 @@ Doon Business School is equipped with state-of-the-art educational and training 
         
 </script>
 
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '671e81721a303b9ba850ddd4' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
         	    	<link rel="preload" as="style" href="https://www.admissionindia.net/assets/front/css/bootstrap.min.css">
 
         <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://www.admissionindia.net/assets/front/css/bootstrap.min.css">
@@ -6155,6 +6142,33 @@ src="https://www.facebook.com/tr?id=408089960963834&ev=PageView&noscript=1"
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SMB84V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+
+		<!-- Start chatbot (script) -->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        // Get the current URL
+        const currentURL = window.location.href;
+
+        // Load the Voiceflow chatbot with the current URL passed as a metadata field
+        window.voiceflow.chat.load({
+          verify: { projectID: '671e81721a303b9ba850ddd4' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          metadata: { source_url: currentURL }  // Pass the URL here
+        });
+
+        // Optional: Log the current URL to the console
+        console.log("Current URL:", currentURL);
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+		<!-- End chatbot script -->
+
+	
 		
         	</body>
 </html>
