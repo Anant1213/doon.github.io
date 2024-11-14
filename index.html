@@ -6150,26 +6150,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
-        // Capture the current URL
+        // Capture current URL
         const currentURL = window.location.href;
-        
-        // Load the Voiceflow chatbot with the current URL passed as metadata
+
+        // Load Voiceflow chat
         window.voiceflow.chat.load({
           verify: { projectID: '671e81721a303b9ba850ddd4' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          metadata:  'currentURL'  // Pass the current URL as metadata
+          versionID: 'production'
+        }).then((voiceflow) => {
+          // Set metadata using interact method after chat is ready
+          voiceflow.interact({
+            action: { type: 'launch' },
+            variables: { source_url: currentURL }
+          });
         });
-        
-        // Optional: Log the current URL to the console for verification
-        console.log("Current URL:", currentURL);
       };
-	  
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
-      v.type = "text/javascript"; 
+      
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
       s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
 		<!-- End chatbot script -->
 
 	
