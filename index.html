@@ -6149,23 +6149,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
-        // Capture the current URL
+	              // Capture the current URL
         const currentURL = window.location.href;
-
-        // Load the Voiceflow chatbot with the current URL passed as metadata
+	      // Load the Voiceflow chatbot with the current URL passed as metadata
         window.voiceflow.chat.load({
           verify: { projectID: '671e81721a303b9ba850ddd4' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          metadata: { source_url: currentURL }  // Pass the current URL as metadata
+	metadata: { source_url: currentURL }  // Pass the current URL as metadata
         });
-
-        // Optional: Log the current URL to the console for verification
+	      // Optional: Log the current URL to the console for verification
         console.log("Current URL:", currentURL);
       };
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-      v.type = "text/javascript";
-      s.parentNode.insertBefore(v, s);
+	  
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
 		
