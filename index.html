@@ -6144,7 +6144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-		<!-- Start chatbot (script) -->
+
 <!-- Start chatbot (script) -->
 <script type="text/javascript">
   (function(d, t) {
@@ -6156,16 +6156,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // Load Voiceflow chat
         window.voiceflow.chat.load({
           verify: { projectID: '671e81721a303b9ba850ddd4' },
-          url: 'https://general-runtime.voiceflow.com',
+          url: currentURL,
           versionID: 'production'
-        }).then((voiceflow) => {
-          // Set metadata using interact method after chat is ready
-          voiceflow.interact({
-            action: { type: 'launch' },
-            variables: { source_url: currentURL }
-          });
         });
-      };
+      }
       
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
       v.type = "text/javascript";
